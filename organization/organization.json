@@ -1,0 +1,22 @@
+{
+    "entity_name": "Organization",
+    "display_name": "Organization",
+    "description": "Organization Node",
+    "extends": [],
+    "attributes": [
+        {
+            "attribute_name": "org_name",
+            "display_name": "Organization Name",
+            "description": "Name of the organization",
+            "required": true,
+            "data_type": "str"
+        },
+        {
+            "attribute_name": "url",
+            "display_name": "URL",
+            "description": "URL to the organization website",
+            "required": false,
+            "data_type": "str"
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+
+{
+    "frame_name": "Sample Frame",
+    "description": "A sample version of Brighthive Frame",
+    "extends": [],
+    "entities": [
+        {
+            "path": "../templates/brighthive_person.json"
+        },
+        {
+            "path": "https://github.com/siyoungbyun/templates/raw/main/organization/organization.json"
+        },
+        {
+            "path": "../templates/stat.json"
+        },
+        {
+            "path": "../templates/data_element.json"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "member_of",
+            "description": "Is a member of",
+            "entity_pairs": [
+                {
+                    "display_name": "Organization Name",
+                    "description": "Is a member of",
+                    "source_entity": "Person",
+                    "target_entity": "Organization"
+                }
+            ]
+        },
+        {
+            "name": "has_stats",
+            "description": "has a",
+            "entity_pairs": [
+                {
+                    "display_name": "Date Created",
+                    "description": "has a",
+                    "source_entity": "DataElement",
+                    "target_entity": "Stat"
+                },
+                {
+                    "display_name": "Date Modified",
+                    "description": "has a",
+                    "source_entity": "DataElement",
+                    "target_entity": "Stat"
+                }
+            ]
+        }
+    ]
+}
